@@ -200,7 +200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: movementSpeed
-      value: 20
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: deltaMovement.y
@@ -241,7 +241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006680, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006680, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -285,11 +285,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: movementSpeed
-      value: 20
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: deltaMovement.y
-      value: 4
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: deltaMovement.z
@@ -697,7 +697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006680, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.5
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006680, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -741,11 +741,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: movementSpeed
-      value: 15
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: deltaMovement.y
-      value: 4
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: deltaMovement.z
@@ -876,7 +876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006680, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.8
+      value: -16.4
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006680, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -920,7 +920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: movementSpeed
-      value: 10
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: deltaMovement.y
@@ -1072,11 +1072,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: movementSpeed
-      value: 30
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: deltaMovement.y
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: deltaMovement.z
@@ -1925,7 +1925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006680, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.04
+      value: -29.4
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006680, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1969,7 +1969,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: movementSpeed
-      value: 20
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 4788932701632006686, guid: 21d72b1ee2ad88f43aaae7f30143299d, type: 3}
       propertyPath: deltaMovement.y
@@ -2073,7 +2073,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977118586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -65.01, y: 1.55, z: 0}
+  m_LocalPosition: {x: -65.3, y: 1.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2102,7 +2102,7 @@ MonoBehaviour:
   dashEnergyText: {fileID: 1170208962}
   deathCount: 0
   startDashEnergy: 0
-  dashEnergy: 2
+  dashEnergy: 3
   fastDashEnergyLoss: 5
   slowDashEnergyLoss: 0.3
   slowDashTargetObject: {fileID: 566597385}
@@ -2180,7 +2180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009351565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.8, y: 4, z: 0}
+  m_LocalPosition: {x: 14, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
