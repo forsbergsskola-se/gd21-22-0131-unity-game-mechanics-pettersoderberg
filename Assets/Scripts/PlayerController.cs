@@ -27,8 +27,31 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform startTransform;
 
     [SerializeField] private Text deathCountText;
+    [SerializeField] private Text dashEnergyText;
 
     [SerializeField] private int deathCount;
+
+    [SerializeField] private float startDashEnergy;
+    [SerializeField] private float dashEnergy;
+    [SerializeField] private float fastDashEnergyLoss;
+    [SerializeField] private float slowDashEnergyLoss;
+
+    public float DashEnergy
+    {
+        get
+        {
+            return dashEnergy;
+        }
+        set
+        {
+            dashEnergy = value;
+            if (dashEnergy < 0)
+            {
+                dashEnergy = 0;
+            }
+            dashEnergyText.text = "Dash Energy: " + dashEnergy;
+        }
+    }
 
     public int DeathCount
     {
@@ -38,16 +61,18 @@ public class PlayerController : MonoBehaviour
         }
         set
         {
-            deathCountText.text = "Deathcunt: " + value;
+            deathCount = value;
+            deathCountText.text = "Killed by Woke Nazi count: " + value;
         }
     }
+
     // Slow dash stuff
     [SerializeField] private GameObject slowDashTargetObject;
     private bool hasSlowDashTarget;
     [SerializeField] private bool isSlowDashEnabled;
 
     // Fast dash stuff
-    private bool isFastDashing;
+    private bool isFastDashButtonDown;
     [SerializeField] private bool isFastDashEnabled;
     
     void Start()
@@ -55,6 +80,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         CancelSlowDash();
         DeathCount = 0;
+        DashEnergy = dashEnergy;
+        startDashEnergy = DashEnergy;
     }
 
     void CancelSlowDash()
@@ -92,10 +119,10 @@ public class PlayerController : MonoBehaviour
         }
 
         playerInput = Input.GetAxis("Horizontal");
-        isFastDashing = Input.GetKey(KeyCode.F);
+        isFastDashButtonDown = Input.GetKey(KeyCode.F);
         
-        bool shouldCancelSlowDash = Mathf.Abs(playerInput) > 0.1f || isFastDashing;
-        if (hasSlowDashTarget && shouldCancelSlowDash)
+        bool shouldCancelSlowDash = Mathf.Abs(playerInput) > 0.1f || (isFastDashEnabled && isFastDashButtonDown);
+        if (isSlowDashEnabled && hasSlowDashTarget && shouldCancelSlowDash)
         {
             CancelSlowDash();
         }
@@ -111,18 +138,25 @@ public class PlayerController : MonoBehaviour
     {
         float movementSpeed = 0;
 
+        if (hasSlowDashTarget && dashEnergy <= 0)
+        {
+            CancelSlowDash();
+        }
+        
         if (hasSlowDashTarget)
         {
             movementSpeed = walkSpeed * slowDashSpeedMultiplier;
             Vector3 direction = (slowDashTargetObject.transform.position - transform.position).normalized;
             rb.velocity = direction * movementSpeed * Time.deltaTime;
+            DashEnergy -= slowDashEnergyLoss * Time.deltaTime;
         }
         else
         {
             movementSpeed = walkSpeed;            
-            if (isFastDashEnabled && isFastDashing)
+            if (isFastDashEnabled && isFastDashButtonDown && DashEnergy > 0)
             {
                 movementSpeed = walkSpeed * fastDashSpeedMultiplier;
+                DashEnergy -= fastDashEnergyLoss * Time.deltaTime;
             }
             
             Vector3 newVelocity = new Vector3(playerInput * movementSpeed * Time.deltaTime, rb.velocity.y, 0.0f);
@@ -143,6 +177,7 @@ public class PlayerController : MonoBehaviour
             CancelSlowDash();
             deathCount++;
             DeathCount = deathCount;
+            DashEnergy = startDashEnergy;
         }
     }
     
